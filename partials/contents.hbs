@@ -1,0 +1,8 @@
+
+<div id="TagCloud">
+	{{#get "tags" limit="all" include="count.posts"}}
+		{{#foreach tags}}	
+			<li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{name}}({{count.posts}})</a></li>		
+		{{/foreach}}
+	{{/get}}
+</div>
